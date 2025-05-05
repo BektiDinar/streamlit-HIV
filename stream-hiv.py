@@ -23,7 +23,7 @@ hiv_diagnosis = ''
 
 # Membuat tombol untuk clustering
 if st.button('Test Clustering HIV'):
-    hiv_clustering = hiv_model.kmeans([[Umur, Jenis_Kelamin, Kecamatan, 
+    hiv_clustering = hiv_model.KMeans([[Umur, Jenis_Kelamin, Kecamatan, 
                                          Kelurahan, Tahun_Register]])
 
     if hiv_clustering[0] == 0:

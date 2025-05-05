@@ -21,15 +21,9 @@ Tahun_Register = st.text_input('Input Nilai Jenis Tahun Register')
 # Code untuk clustering
 hiv_diagnosis = ''
 
-import pandas as pd
-# Assuming your data is in a Pandas DataFrame called 'data'
-features = df[['Umur', 'Jenis_Kelamin', 'Kecamatan']].values
-hiv_clustering = hiv_model.cluster(features)
-
 # Membuat tombol untuk clustering
 if st.button('Test Clustering HIV'):
-    hiv_clustering = hiv_model.cluster([[Umur, Jenis_Kelamin, Kecamatan, 
-                                         Kelurahan, Tahun_Register]])
+    hiv_clustering = hiv_model.cluster([[Umur, Kelurahan]])
 
     if hiv_clustering[0] == 0:
         hiv_diagnosis = 'Status ODHIV Gagal Follow Up'

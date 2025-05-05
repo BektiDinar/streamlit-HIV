@@ -2,6 +2,5 @@ Numpy = 2.0.2
 Pandas =  2.2.2
 Pip = 24.1.2
 Streamlit
-Pickle
 scikit-learn
 sklearn.cluster = from sklearn.cluster import KMeans

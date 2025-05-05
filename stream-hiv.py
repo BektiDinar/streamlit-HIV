@@ -23,14 +23,13 @@ hiv_diagnosis = ''
 
 # Membuat tombol untuk clustering
 if st.button('Test Clustering HIV'):
-    hiv_clustering = hiv_model.cluster([[Umur, Jenis_Kelamin, Kecamatan, 
-                                         Kelurahan, Tahun_Register]])
+    hiv_clustering = hiv_model.cluster([[Umur, Jenis_Kelamin, Kecamatan, Kelurahan, Tahun_Register]])
 
-if(hiv_clustering[0] == 0):
-    hiv_diagnosis = 'Status ODHIV Gagal Follow Up'
-elif(hiv_clustering[0] == 1):
-    hiv_diagnosis = 'Status ODHIV Meninggal'
-else :
-    hiv_diagnosis = 'Status ODHIV Sedang Pengobatan'
+    if hiv_clustering[0] == 0:
+        hiv_diagnosis = 'Status ODHIV Gagal Follow Up'
+    elif hiv_clustering[0] == 1:
+        hiv_diagnosis = 'Status ODHIV Meninggal'
+    else:
+        hiv_diagnosis = 'Status ODHIV Sedang Pengobatan'
 
-st.success(hiv_diagnosis)
+    st.success(hiv_diagnosis)

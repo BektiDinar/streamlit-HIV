@@ -10,13 +10,13 @@ st.title('Data Mining Clustering HIV')
 # Indentifikasi inputan 
 Umur = st.text_input('Input Nilai Umur')
 
-Jenis Kelamin = st.text_input('Input Nilai Jenis Kelamin')
+Jenis_Kelamin = st.text_input('Input Nilai Jenis Kelamin')
 
 Kecamatan = st.text_input('Input Nilai Jenis Kecamatan')
 
 Kelurahan = st.text_input('Input Nilai Jenis Kelurahan')
 
-Tahun Register = st.text_input('Input Nilai Jenis Tahun Register')
+Tahun_Register = st.text_input('Input Nilai Jenis Tahun Register')
 
 # Code untuk clustering
 hiv_diagnosis = ''

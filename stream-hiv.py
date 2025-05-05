@@ -2,29 +2,21 @@ import pickle
 import streamlit as st
 
 # Membaca model
-HIV_model = pickle.load(open('HIV_model.sav', 'rb'))
+hiv_model = pickle.load(open('HIV_model.sav', 'rb'))
 
 # Judul Web
 st.title('Data Mining Clustering HIV')
 
-# Membagi kolom
-col1, col2 = st.columns(2)
-
 # Indentifikasi inputan 
-with col1 :
-    Umur = st.text_input('Input Nilai Umur')
+Umur = st.text_input('Input Nilai Umur')
 
-with col2 :
-    Jenis Kelamin = st.text_input('Input Nilai Jenis Kelamin')
+Jenis Kelamin = st.text_input('Input Nilai Jenis Kelamin')
 
-with col1 :
-    Kecamatan = st.text_input('Input Nilai Jenis Kecamatan')
+Kecamatan = st.text_input('Input Nilai Jenis Kecamatan')
 
-with col2 :
-    Kelurahan = st.text_input('Input Nilai Jenis Kelurahan')
+Kelurahan = st.text_input('Input Nilai Jenis Kelurahan')
 
-with col1 :
-    Tahun Register = st.text_input('Input Nilai Jenis Tahun Register')
+Tahun Register = st.text_input('Input Nilai Jenis Tahun Register')
 
 # Code untuk clustering
 hiv_diagnosis = ''
